@@ -6,9 +6,6 @@ import { getImages } from '../../ducks/reducer';
 
 
 class Modal4 extends Component {
-    constructor() {
-        super()
-    }
     render() {
         return (
             <div>
@@ -16,6 +13,7 @@ class Modal4 extends Component {
                     Images</div>
                 <div>
                     <input
+                    
                         onChange={(e) => getImages(e.target.value)} />
                 </div>
             </div>

@@ -5,6 +5,7 @@ const express = require('express'),
       Auth0Strategy = require('passport-auth0'),
       massive = require('massive'),
       bodyParser = require('body-parser'),
+     stripe = require('stripe')(process.env.SECRET_KEY),
       ctrl = require('./controllers/controllers');
 
 const {
@@ -18,6 +19,8 @@ const {
 } = process.env;
 
 const app = express();
+
+app.use( express.static( `${__dirname}/../build` ) );
 app.use(bodyParser.json());
 
 app.use(session({
@@ -28,6 +31,41 @@ app.use(session({
 
 app.use(passport.initialize());
 app.use(passport.session());
+
+app.post('/api/payment', function (req, res, next) {
+    //convert amount to pennies
+    const amountArray = req.body.amount.toString().split('');
+    console.log('amt', req.body.amount.toString().split(''));
+  
+    // Joe's penny function below
+    const pennies = [];
+    for (var i = 0; i < amountArray.length; i++) {
+      if (amountArray[i] === ".") {
+        if (typeof amountArray[i + 1] === "string") pennies.push(amountArray[i + 1]);
+        else pennies.push("0");
+        if (typeof amountArray[i + 2] === "string") pennies.push(amountArray[i + 2]);
+        else pennies.push("0");
+        break;
+      }
+      else pennies.push(amountArray[i]);
+    }
+    const convertedAmt = parseInt(pennies.join(''));
+  
+    const charge = stripe.charges.create( // method built in to library
+      { 
+        amount: convertedAmt, // amount in cents, again
+        currency: 'usd',
+        source: req.body.token.id, // needs to be the token id
+        description: 'Test charge from react app' // any description you want
+      },
+      function (err, charge) {
+        if (err) return res.sendStatus(500); // error means charge failure
+        return res.sendStatus(200);
+        // if (err && err.type === 'StripeCardError') {
+        //   // The card has been declined
+        // }
+      });
+  });
 
 massive(CONNECTION_STRING).then(db => {
     app.set('db', db);
@@ -70,8 +108,8 @@ passport.deserializeUser( (id, done)=>{
 
 app.get('/auth', passport.authenticate('auth0'));
 app.get('/auth/callback', passport.authenticate('auth0', {
-    successRedirect: 'http://localhost:3000/#/private'
-}))
+    successRedirect: process.env.REACT_APP_REDIRECT + '#/home'
+})) 
 
 app.get('/auth/me', (req, res)=>{
     if(!req.user){
@@ -82,12 +120,13 @@ app.get('/auth/me', (req, res)=>{
 })
 
 app.post('/api/adventures', ctrl.create);
+// app.post('/api/adventures', ctrl.name);
 app.get('/api/adventures', ctrl.read);
 app.delete('/api/adventures/:id', ctrl.delete);
 
 app.get('/logout', (req, res)=>{
     req.logOut();
-    res.redirect('http://localhost:3000/')
+    res.redirect(process.env.REACT_APP_REDIRECT)
 })
 
 

@@ -1,18 +1,30 @@
 import React, { Component } from 'react';
 import './Adventures.css';
 import { connect } from 'react-redux';
-import { getLocation, getDate, getTitle, getDetails } from './../../ducks/reducer'
+import { getLocation, getDate, getTitle, getDetails, getUser } from './../../ducks/reducer'
 import axios from 'axios';
 
 class Adventures extends Component {
-    constructor(props){
+    constructor(props) {
         super(props)
-        this.state={
-            adventures:[]
+        this.state = {
+            adventures: []
         }
     }
     componentDidMount() {
         axios.get('/api/adventures').then(resp => {
+            console.log(resp)
+            this.setState({
+                adventures: resp.data
+            })
+        })
+    }
+    pageLoad() {
+        window.location.reload(true)
+    }
+
+    deleteAdv(id) {
+        axios.delete('/api/adventures/' + id).then(resp => {
             this.setState({
                 adventures: resp.data
             })
@@ -20,47 +32,55 @@ class Adventures extends Component {
     }
 
     render() {
+        let { userData } = this.props;
         let newAdv = this.state.adventures.map((val, i) => {
             return (
-                <div>
-                    <div>Lugar: {val.location} </div>
-                    <div>Fecha: {val.date}</div>
-                    <div>Titulo: {val.title}</div>
-                    <div>Description: {val.details}</div>
+                <div className="Adventures_box">
+                    <div>Name: {val.user_name}</div>
+                    <div>Place: {val.location} </div>
+                    <div>Date: {val.date}</div>
+                    <div>Title: {val.title}</div>
+                    <div>Description: {val.description}</div>
+                    <a><button onClick={() => this.deleteAdv(val.id)}>Delete</button></a>
                 </div>
-
             )
         })
         return (
             <div className="Adventures">
-                <nav className="Adventures_nav">
+                <div className="Adventures_header">
                     <ul className="Adventures_list">
-                        <li className="Adventures_list_item"><a className="Adventures_name" href="#">Home</a></li>
-                        <li className="Adventures_list_item"><a className="Adventures_name" href="#">About</a></li>
-                        <li className="Adventures_list_item"><a className="Adventures_name" href="#">Blog</a></li>
-                        {/* <li className="Adventures_list_item"><a className="Adventures_name" href='http://localhost:3005/logout'>Logout</a></li> */}
+                        <li className="Adventures_list_item"><a className="Adventures_name" href="/#/home">Home</a></li>
+                        <li className="Adventures_list_item"><a className="Adventures_name" href="/#/Adventures">Adventures</a></li>
+                        <li className="Adventures_list_item"><a className="Adventures_name" href="/#/private">Map</a></li>
+                        {/* <li className="Adventures_list_item"><a className="Adventures_name" href={process.env.REACT_APP_LOGOUT}>Logout</a></li> */}
                     </ul>
-                </nav>
-                <div className="overarching-div">
-                    <div className="form">
-                        <div>
-                            {newAdv}
-                        </div>
-
-
-                    </div>
+                    <ul className="Adventures_list">
+                        <span><a className="Adventures_name">{userData.user_name ? userData.user_name : null}</a></span>
+                        {
+                            userData.img ?
+                                <img className='avatar' src={userData.img} /> :
+                                null
+                        }
+                        <li className="Adventures_list_item"><a className="Adventures_name" href={process.env.REACT_APP_LOGOUT}>Logout</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <button className="button-adv" onClick={() => this.pageLoad()}>Show all</button>
+                </div>
+                <div className="Adventures_body">
+                    {newAdv}
                 </div>
             </div>
         )
     }
 }
 function mapStateToProps(state) {
-
     return {
         location: state.location,
         title: state.title,
         date: state.date,
-        details: state.details
+        details: state.details,
+        userData: state.user
     };
 }
-export default connect(mapStateToProps, { getLocation, getDate, getTitle, getDetails })(Adventures);
+export default connect(mapStateToProps, { getLocation, getDate, getTitle, getDetails, getUser })(Adventures);

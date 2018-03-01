@@ -1,17 +1,20 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
- 
+@import url('https://fonts.googleapis.com/css?family=Overlock');
 .Home{
+    border: 1px solid yellow;
+    /* background: url('img1.JPG'); */
+    width: 100%;
+    height: 100vh;
+}
+.Home_header{
     width: 100%;
     height: 80px;
-    background-color: #0005;
+    /* border: 1px solid red; */
+    /* background-color: #0005; */
+    border: none;
+    box-shadow: 0 10px 25px 0 #C7CBDC;
     line-height: 80px;
-}
-.Home_nav {
-    float: right;
+    display: flex;
+    justify-content: space-between;
 }
 
 .Home_list_item{
@@ -19,28 +22,61 @@
     display: inline-block;
     transition: 0.8s all;
 }
+
 .Home_list_item:hover{
     background-color: black;
 }
 
+.Home_name:hover{
+    color: white;
+}
+
+.Home_name1{
+    text-decoration: none;
+    color: black;
+    padding: 50px;
+}
+
 .Home_name{
     text-decoration: none;
-    color: white;
+    color: black;
     padding: 50px;
 }
 
 .btnadd{
-    margin: 400px;
-    border-radius: 8px;
-    padding: 14px 40px;
-    font-size: 12px;
-    position: absolute;
-    -webkit-transition-duration: 0.4s; 
-    transition-duration: 0.4s;
-   
+    padding: 14px 14px;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    border: 2px solid black;
+    font-family: 'Overlock', cursive;
+    -webkit-transition-duration: 0.8s; 
+    transition-duration: 0.8s;
 }
 
 .btnadd:hover{
-    background-color: lightseagreen; 
+    background-color: black; 
     color: white;
+   
+}
+
+.button-box{
+    position: absolute;
+    top: 300px;
+    right: 560px;
+}
+
+.avatar{
+    border-radius: 50%;
+    margin: 0px;
+    height: 35px;
+    width: 35px;
+}
+
+.Home_title{
+    /* border: 1px solid green; */
+    position: absolute;
+    top: 250px;
+    right: 450px;
+    width: 380px;    
 }

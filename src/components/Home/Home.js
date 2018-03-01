@@ -1,16 +1,19 @@
 import React, { Component } from 'react';
 import './Home.css';
-// import MapContainer from '../Map/MapContainer'
+import { getUser } from './../../ducks/reducer';
 import Modal from '../Modal/Modal'
+import { connect } from 'react-redux';
 
-export default class Home extends Component {
+class Home extends Component {
     constructor() {
         super()
         this.state = {
-
             working: false
         }
         this.handleModal = this.handleModal.bind(this);
+    }
+    componentDidMount() {
+        this.props.getUser();
     }
 
     handleModal() {
@@ -18,25 +21,41 @@ export default class Home extends Component {
             working: !this.state.working
         })
     }
+
     render() {
+        let { userData } = this.props;
         return (
             <div className="Home">
-                <nav className="Home_nav">
+                <div className="Home_header">
                     <ul className="Home_list">
-                        <button className="btnadd" onClick={this.handleModal} href="">+ ADD</button>
-                        <li className="Home_list_item"><a className="Home_name" href="#">Home</a></li>
-                        <li className="Home_list_item"><a className="Home_name" href="#">About</a></li>
-                        <li className="Home_list_item"><a className="Home_name" href="#">Blog</a></li>
-                        <li className="Home_list_item"><a className="Home_name" href={process.env.REACT_APP_LOGIN}>Login</a></li>
+                        <li className="Home_list_item"><a className="Home_name" href="/#/home">Home</a></li>
+                        <li className="Home_list_item"><a className="Home_name" href="/#/Adventures">Adventures</a></li>
+                        <li className="Home_list_item"><a className="Home_name" href="/#/private">Map</a></li>
                     </ul>
-                </nav>
-                {/* <MapContainer></MapContainer> */}
-              <Modal modal={this.state.working}></Modal>
-                    
-    
-
-
+                    <ul className="Home_list">
+                        <span><a className="Home_name1" >{userData.user_name ? userData.user_name : null}</a></span>
+                        {
+                            userData.img ?
+                                <img className='avatar' src={userData.img} /> :
+                                null
+                        }
+                        <li className="Home_list_item"><a className="Home_name" href={process.env.REACT_APP_LOGOUT}>Logout</a></li>
+                    </ul>
+                </div>
+                <div className="Home_title">
+                        <h1>ADVENTURES MAP</h1>
+                </div>
+                <div className="button-box">
+                    <button className="btnadd" onClick={this.handleModal}>ADD YOUR ADVENTURE</button>
+                </div>
+                <Modal modal={this.state.working} back={this.handleModal}></Modal>
             </div>
         )
     }
 }
+function mapsStateToProps(state) {
+    return {
+        userData: state.user
+    }
+}
+export default connect(mapsStateToProps, { getUser })(Home);

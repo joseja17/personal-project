@@ -1,0 +1,25 @@
+.Stripe-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-width: 350px;
+    margin-top: 80px;
+    margin-left: 450px;
+    margin-right: 450px;
+   padding-bottom: 50px;
+   border: none;
+   box-shadow: 0 10px 30px 0 #C7CBDC;
+  }
+
+  .sc {
+    margin-top: 45px;
+    width: 175px;
+    height: 40px;
+    border-radius: 5px;
+    background: white;
+    font-weight: bold;
+    font-size: 20px;
+    
+  }
+  

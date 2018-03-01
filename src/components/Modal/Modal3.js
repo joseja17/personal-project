@@ -6,9 +6,6 @@ import {getDetails} from '../../ducks/reducer';
 
 
 class Modal3 extends Component {
-    constructor() {
-        super()
-    }
     render() {
         return (
             <div><div className="line3"><hr className="line3hr"/></div>

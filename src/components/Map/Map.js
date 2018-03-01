@@ -7,19 +7,21 @@ import axios from 'axios';
 export default class Map extends Component {
     constructor(props) {
         super(props)
-        this.state={
-            adventures:[]
+        this.state = {
+            adventures: []
         }
     }
-    componentDidMount(){
-        axios.get('/api/adventures').then(res=>{
+    componentDidMount() {
+        axios.get('/api/adventures').then(res => {
             this.setState({
-                adventures:res.data
+                adventures: res.data
             })
         })
     }
 
     componentDidUpdate(prevProps, prevState) {
+        console.log(prevProps)
+        console.log(this.props)
         if (prevProps.google !== this.props.google) {
             this.loadMap()
         }
@@ -43,27 +45,34 @@ export default class Map extends Component {
                 mapTypeId: 'terrain'
             })
             this.map = new maps.Map(node, mapConfig);
-             console.log(this.state.adventures)
-// for loop starts here
-            for (var i=0; i<this.state.adventures.length; i++){
+            console.log(this.state.adventures)
+            // for loop starts here
+            for (var i = 0; i < this.state.adventures.length; i++) {
                 const marker = new google.maps.Marker({
-                    position: {lat: parseInt(this.state.adventures[i].latitud), lng: parseInt(this.state.adventures[i].longitud)},
+                    position: { lat: parseInt(this.state.adventures[i].latitud), lng: parseInt(this.state.adventures[i].longitud) },
                     map: this.map,
                     animation: google.maps.Animation.DROP,
-                    title: 'Click for more details.',         
+                    title: 'Click for more details.',
                 })
-    
                 const InfoWindow = new google.maps.InfoWindow({
-                    content: `See More`
+
+                    content: `<h3>${this.state.adventures[i].title}</h3>
+                    <h6>${this.state.adventures[i].date}</h6>
+                    <a href={process.env.REACT_APP_REDIRECT} + "#/Adventures">See More</a>`,
+                    maxWidth: 200
                 })
-                marker.addListener('click', function(){
+                
+                marker.addListener('click', function () {
                     InfoWindow.open(this.map, marker)
                 })
+                
             }
-            }
-           
+        }
+        
+
         // ...
     }
+    
 
     render() {
 

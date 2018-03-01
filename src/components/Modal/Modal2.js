@@ -11,12 +11,13 @@ class Modal2 extends Component {
             <div>
                 <div className="line2"><hr className="line2hr" /></div>
                 Title: <input
+                className="input1"
                     onChange={ ( e ) => this.props.getTitle( e.target.value ) } />
                 Date: <input
+                className="input1"
                  onChange={ ( e ) => this.props.getDate( e.target.value ) }
                  type="date" />
             </div>
-
         )
     }
 }

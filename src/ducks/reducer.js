@@ -83,7 +83,7 @@ export function getLocation( location ) {
     };
   }
 
-  export function getDetails(details  ) {
+  export function getDetails( details ) {
    
     return {
       type: GET_DETAILS,

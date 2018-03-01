@@ -47,7 +47,7 @@ class Modal1 extends Component {
                 onChange={(e) =>{ 
                     this.handleChange(e)
                 }}/>
-                <button onClick={this.getCoordinates}>Click</button>
+                <button className="button-modal" onClick={this.getCoordinates}>Click</button>
                 <MapContainer2 newLocation={this.state.location} lat={this.state.lat} lng={this.state.lng}></MapContainer2>
             </div>
 

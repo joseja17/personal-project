@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css?family=Overlock');
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-width: 350px;
+  margin-top: 80px;
+  margin-left: 450px;
+  margin-right: 450px;
+ padding-bottom: 50px;
+ border: none;
+ box-shadow: 0 10px 30px 0 #C7CBDC;
+}
+
+.img {
+  margin: 50px;
+  width: 250px;
+}
+
+.button-login {
+    margin-top: 15px;
+    width: 175px;
+    height: 40px;
+    border-radius: 5px;
+    background: white;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: 'Overlock', cursive;
+    -webkit-transition-duration: 0.4s; 
+    transition-duration: 0.4s;
+  }
+  
+  .button-login:focus {
+    outline: none;
+  }
+
+  .button-login:hover{
+    background-color: black; 
+    color: white;
+    font-weight: bold;
+  }

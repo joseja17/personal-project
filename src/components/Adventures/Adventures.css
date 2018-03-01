@@ -3,15 +3,21 @@
     padding: 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
- 
 .Adventures{
+    border: 1px solid yellow;
+    width: 100%;
+    height: 100vh;
+    /* background-size: cover; */
+}
+
+.Adventures_header{
     width: 100%;
     height: 80px;
     background-color: #0005;
     line-height: 80px;
-}
-.Adventures_nav {
-    float: right;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .Adventures_list_item{
@@ -28,3 +34,43 @@
     color: white;
     padding: 50px;
 }
+.Adventures_body{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;    
+}
+
+.Adventures_box{
+    
+  flex-direction: column;
+  min-width: 300px;
+  min-height: 200px;
+  margin-top: 20px;
+ margin-left: 200px;
+ width: 0px;
+ padding: 20px 20px;
+ border: none;
+ box-shadow: 0 10px 30px 0 #C7CBDC;
+}
+.button-adv {
+    margin-top: 5px;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    background: white;
+    font-weight: bold;
+    font-size: 12px;
+    font-family: 'Overlock', cursive;
+    -webkit-transition-duration: 0.4s; 
+    transition-duration: 0.4s;
+  }
+  
+  .button-adv:focus {
+    outline: none;
+  }
+
+  .button-adv:hover{
+    background-color: black; 
+    color: white;
+    font-weight: bold;
+  }

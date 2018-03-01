@@ -31,11 +31,11 @@ gettingAdv(){
         return (
             <div><div className="line5"><hr className="line5hr"/></div>
             <Link to="/Adventures">
-            <button onClick={this.newAdventure}>Post Adventure</button>
+            <button className="button-modal" onClick={this.newAdventure}>Post Adventure</button>
             </Link>
 
-           <Link to="/Adventures">
-              <button className="Modal5_btn"> Login to Submit </button>
+           <Link to="private">
+              <button className="button-modal"> Login to Submit </button>
             </Link>
             </div>
 

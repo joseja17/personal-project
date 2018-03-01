@@ -10,21 +10,27 @@ import Modal5 from './Modal5'
 export default class Modal extends Component {
     constructor(props) {
         super(props)
-        this.state = { whichModalIsOpen: 0 }
+        this.state = { whichModalIsOpen: 0
+        }
     }
+   
 
     handleModal(num) {
         this.setState({
             whichModalIsOpen: num
         })
     }
+
+
     render() {
+        console.log("THIS IS THIS.PROPS",this.props);
         return (
             <div className={this.props.modal ? "modal" : "modal-hidden"} >
-                <div>
-                    <header className="head">
-                        Share your story
+                <div className="Modal_header">
                     
+                    <header className="head">
+                    <button onClick={this.props.back} className="Modal_close_button">Back</button>
+                        Share your story
                 </header>
                
                     <nav className="Modal_nav">

@@ -1,8 +1,6 @@
 module.exports = {
 
     create: (req, res) => {
-        console.log(req.body)
-        
         let newAdventure = {
             location: req.body.location,
             title: req.body.title,
@@ -10,16 +8,19 @@ module.exports = {
             details: req.body.details,
             images: req.body.images,
             latitud: req.body.latitud,
-            longitud: req.body.longitud
+            longitud: req.body.longitud,
+            id: req.user.id
         }
         const db = req.app.get('db');
         db.create_adventures([newAdventure.location,
         newAdventure.title,
-        newAdventure.details,
         newAdventure.date,
+        newAdventure.details,
         newAdventure.images,
         newAdventure.latitud,
-        newAdventure.longitud]).then(resp => {
+        newAdventure.longitud,
+        newAdventure.id
+        ]).then(resp => {
             res.status(200).send(resp)
         })
     },
@@ -32,10 +33,9 @@ module.exports = {
     },
 
     delete: (req, res) => {
-
-
+        const db = req.app.get('db');
+        db.delete_adventures([req.params.id]).then(resp => {
+            res.status(200).send(resp)
+        })
     }
-
-
-
 }
