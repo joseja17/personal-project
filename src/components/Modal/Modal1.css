@@ -1,0 +1,47 @@
+
+.inputModal1 {
+    width: 200px;
+    height: 30px;
+    border: none;
+    font-size: 15px;
+    position: absolute;
+    top: 185px;
+    right: 290px;
+    padding-left: 5px;
+  }
+
+.Location_title{
+    width: 100px;
+    height: 40px;
+    position: absolute;
+    top: 190px;
+    left: 215px;
+    /* border: 1px solid red ; */
+
+}
+  
+.button-modal1 {
+    margin-top: 15px;
+    width: 80px;
+    height: 30px;
+    border-radius: 5px;
+    background: white;
+   
+    font-size: 20px;
+    font-family: 'Overlock', cursive;
+    -webkit-transition-duration: 0.4s; 
+    transition-duration: 0.4s;
+    position: absolute;
+    top: 172px;
+    right: 198px;
+  }
+  
+  .button-modal1:focus {
+    outline: none;
+  }
+
+  .button-modal1:hover{
+    background-color: black; 
+    color: white;
+    font-weight: bold;
+  }

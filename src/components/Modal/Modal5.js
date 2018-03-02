@@ -29,7 +29,7 @@ gettingAdv(){
     render() {
         console.log(this.props);
         return (
-            <div><div className="line5"><hr className="line5hr"/></div>
+            <div>
             <Link to="/Adventures">
             <button className="button-modal" onClick={this.newAdventure}>Post Adventure</button>
             </Link>

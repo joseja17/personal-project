@@ -1,6 +1,6 @@
 import axios from 'axios'
 import React, { Component } from 'react';
-import './Modal.css'
+import './Modal1.css'
 import {connect} from 'react-redux';
 import MapContainer2 from '../Map/MapContainer2'
 import {getLocation} from '../../ducks/reducer'
@@ -40,14 +40,14 @@ class Modal1 extends Component {
     render() {
         const {getLocation} = this.props
         return (
-            <div>
-                <div className="line1" ><hr className="line1hr" /></div>
-                Location: <input 
-                className="input1" placeholder="City Name"
+            <div className="Modal1_body">
+               <div className="Location_title">Location:</div>
+                <input 
+                className="inputModal1" placeholder="City Name"
                 onChange={(e) =>{ 
                     this.handleChange(e)
                 }}/>
-                <button className="button-modal" onClick={this.getCoordinates}>Click</button>
+                <button className="button-modal1" onClick={this.getCoordinates}>Search</button>
                 <MapContainer2 newLocation={this.state.location} lat={this.state.lat} lng={this.state.lng}></MapContainer2>
             </div>
 

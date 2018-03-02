@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css?family=Overlock');
+.Header_header{
+    width: 100%;
+    height: 80px;
+    /* border: 1px solid red; */
+    background-color: #0002;
+    border: none;
+    /* box-shadow: 0 10px 25px 0 #C7CBDC; */
+    line-height: 80px;
+    display: flex;
+}
+
+.Header_list_item{
+    list-style-type: none;
+    display: inline-block;
+    transition: 0.8s all;
+}
+
+.Header_list_item:hover{
+    background-color: black;
+}
+
+.Header_name:hover{
+    color: white;
+}
+.Header_name_logout:hover{
+    color: white;
+    background-color: black;
+    transition: 0.8s all;
+}
+
+.Header_name_name{
+    text-decoration: none;
+    color: black;
+    position: absolute;
+    right: 195px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.Header_name_logout{
+    text-decoration: none;
+    color: black;
+    padding: 0px 40px;
+    position: absolute;
+    right: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.Header_name{
+    text-decoration: none;
+    color: black;
+    padding: 30px 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+

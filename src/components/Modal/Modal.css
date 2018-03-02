@@ -2,13 +2,14 @@
 .modal{
     width: 800px;
     height: 600px;
-    margin: 200px;
     position: absolute;
-    left: 50px;
-    top: 100px;
-    margin-top: 20px;
-    background: rgb(3, 182, 122);
+    left: 245px;
+    top: 130px;
+    border-radius: 12px;
+    /* background: rgb(3, 182, 122); */
+    background: rgb(6, 178, 184);
     transition: all 1s;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .modal-hidden {
@@ -18,13 +19,21 @@
     opacity: 0;
     width: 0;
     height: 0;
-    transition: all 1s;
+    transition: all 0.7s;
 }
 .head{
-    background-color: #0005;
+    /* background-color: #0005; */
     line-height: 80px;
     color: white;
     border: 1px solid black;
+    border-radius: 12px;
+    font-size: 30px;
+}
+.Modal_list{
+    margin: 0px -14px;
+    position: absolute;
+    top: 82px;
+    left: 10px;
 }
 
 .Modal_list_item{
@@ -38,7 +47,6 @@
     background-color: black;
     cursor: pointer;
 }
-
 .Modal_name{
     text-decoration: none;
     color: white;
@@ -47,106 +55,22 @@
     margin: 11.1px;
 }
 .line{
-    margin: 0 10px;
-}
-.line1{
-    margin: 0px 6px;
-    padding-right: 585px;
-    
-}
-.line1hr{
-    border-color: red;
+    margin: 78px 10px;
 }
 
-.line2{
-    margin: 0px 10px;
-    padding-right: 474px;
-}
-.line2hr{
-    border-color: red;
-}
-.line3{
-    margin: 0px 10px;
-    padding-right: 347px;
-}
-.line3hr{
-    border-color: red;
-}
-.line4{
-    margin: 0px 10px;
-    padding-right: 214px;
-}
-.line4hr{
-    border-color: red;
-}
-.line5{
-    margin: 0px 10px;
-    
-}
-.line5hr{
-    border-color: red;
-}
 
-.input1 {
-    margin-top: 15px;
-    width: 200px;
-    height: 30px;
-    border: none;
-    border-bottom: solid 1px;
-    font-size: 15px;
-    padding-left: 5px;
-  }
-
-.input3{
-    width: 80%;
-    height: 150px;
-    padding: 12px 20px;
-    margin-top: 50px;
-    box-sizing: border-box;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    background-color: #f8f8f8;
-    resize: none;
-}
-
-.button-modal {
-    margin-top: 15px;
-    width: 175px;
+.Back_button{
     height: 40px;
-    border-radius: 5px;
-    background: white;
-   
-    font-size: 20px;
-    font-family: 'Overlock', cursive;
-    -webkit-transition-duration: 0.4s; 
-    transition-duration: 0.4s;
-  }
-  
-  .button-modal:focus {
+    width: 45px;
+}
+.Modal_close_button:focus {
     outline: none;
   }
 
-  .button-modal:hover{
-    background-color: black; 
-    color: white;
-    font-weight: bold;
-  }
-
-  .Modal_close_button{
+.Modal_close_button{
       position: absolute;
       left: 15px;
-      top: 20px;
-      padding: 10px 10px;
-    background-color: #0000;
-    color: black;
-    font-weight: bold;
-    border: 2px solid black;
-    font-family: 'Overlock', cursive;
-    -webkit-transition-duration: 0.8s; 
-    transition-duration: 0.8s;
+      top: 22px;
+      background: rgb(6, 178, 184);
+    border: none;
   }
-  .Modal_close_button:hover{
-    background-color: black; 
-    color: white;
-   
-}

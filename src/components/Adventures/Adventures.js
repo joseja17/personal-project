@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import './Adventures.css';
 import { connect } from 'react-redux';
-import { getLocation, getDate, getTitle, getDetails, getUser } from './../../ducks/reducer'
+import { getLocation, getDate, getTitle, getDetails } from './../../ducks/reducer'
 import axios from 'axios';
+import Header from '../Header/Header'
 
 class Adventures extends Component {
     constructor(props) {
@@ -32,7 +33,7 @@ class Adventures extends Component {
     }
 
     render() {
-        let { userData } = this.props;
+       
         let newAdv = this.state.adventures.map((val, i) => {
             return (
                 <div className="Adventures_box">
@@ -47,23 +48,7 @@ class Adventures extends Component {
         })
         return (
             <div className="Adventures">
-                <div className="Adventures_header">
-                    <ul className="Adventures_list">
-                        <li className="Adventures_list_item"><a className="Adventures_name" href="/#/home">Home</a></li>
-                        <li className="Adventures_list_item"><a className="Adventures_name" href="/#/Adventures">Adventures</a></li>
-                        <li className="Adventures_list_item"><a className="Adventures_name" href="/#/private">Map</a></li>
-                        {/* <li className="Adventures_list_item"><a className="Adventures_name" href={process.env.REACT_APP_LOGOUT}>Logout</a></li> */}
-                    </ul>
-                    <ul className="Adventures_list">
-                        <span><a className="Adventures_name">{userData.user_name ? userData.user_name : null}</a></span>
-                        {
-                            userData.img ?
-                                <img className='avatar' src={userData.img} /> :
-                                null
-                        }
-                        <li className="Adventures_list_item"><a className="Adventures_name" href={process.env.REACT_APP_LOGOUT}>Logout</a></li>
-                    </ul>
-                </div>
+                <Header></Header>
                 <div>
                     <button className="button-adv" onClick={() => this.pageLoad()}>Show all</button>
                 </div>
@@ -83,4 +68,4 @@ function mapStateToProps(state) {
         userData: state.user
     };
 }
-export default connect(mapStateToProps, { getLocation, getDate, getTitle, getDetails, getUser })(Adventures);
+export default connect(mapStateToProps, { getLocation, getDate, getTitle, getDetails })(Adventures);

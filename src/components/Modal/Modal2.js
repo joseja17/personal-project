@@ -1,6 +1,5 @@
-// import axios from 'axios'
 import React, { Component } from 'react';
-import './Modal.css'
+import './Modal2.css'
 import {connect} from 'react-redux';
 import {getTitle, getDate} from '../../ducks/reducer'; 
 
@@ -8,13 +7,14 @@ class Modal2 extends Component {
    
     render() {
         return (
-            <div>
-                <div className="line2"><hr className="line2hr" /></div>
-                Title: <input
-                className="input1"
+            <div className="Modal2_body">
+            <div className="Title_Title">Title:</div>
+                <input
+                className="inputModal2_Title"
                     onChange={ ( e ) => this.props.getTitle( e.target.value ) } />
-                Date: <input
-                className="input1"
+                    <div className="Date_Title">Date:</div>
+                <input
+                className="inputModal2_Date"
                  onChange={ ( e ) => this.props.getDate( e.target.value ) }
                  type="date" />
             </div>

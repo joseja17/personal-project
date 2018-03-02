@@ -1,46 +1,17 @@
 @import url('https://fonts.googleapis.com/css?family=Overlock');
 .Home{
-    border: 1px solid yellow;
-    /* background: url('img1.JPG'); */
+    background: url('background3.JPG');
     width: 100%;
     height: 100vh;
+    background-size: cover;
 }
-.Home_header{
-    width: 100%;
-    height: 80px;
-    /* border: 1px solid red; */
-    /* background-color: #0005; */
-    border: none;
-    box-shadow: 0 10px 25px 0 #C7CBDC;
-    line-height: 80px;
-    display: flex;
-    justify-content: space-between;
-}
+.Home_logo{
+    width: 350px;
+    height: 400px;
+    position: absolute;
+    top: 60px;
+    right: 470px;
 
-.Home_list_item{
-    list-style-type: none;
-    display: inline-block;
-    transition: 0.8s all;
-}
-
-.Home_list_item:hover{
-    background-color: black;
-}
-
-.Home_name:hover{
-    color: white;
-}
-
-.Home_name1{
-    text-decoration: none;
-    color: black;
-    padding: 50px;
-}
-
-.Home_name{
-    text-decoration: none;
-    color: black;
-    padding: 50px;
 }
 
 .btnadd{
@@ -62,21 +33,21 @@
 
 .button-box{
     position: absolute;
-    top: 300px;
-    right: 560px;
+    top: 380px;
+    right: 570px;
 }
 
 .avatar{
     border-radius: 50%;
-    margin: 0px;
     height: 35px;
     width: 35px;
-}
-
-.Home_title{
-    /* border: 1px solid green; */
     position: absolute;
-    top: 250px;
+    top: 25px;
+    right: 145px;
+}
+.Home_title{
+    position: absolute;
+    top: 220px;
     right: 450px;
     width: 380px;    
 }

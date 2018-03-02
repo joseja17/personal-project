@@ -9,13 +9,11 @@ class Modal4 extends Component {
     render() {
         return (
             <div>
-                <div><div className="line4"><hr className="line4hr" /></div>
-                    Images</div>
-                <div>
+               
                     <input
                     
                         onChange={(e) => getImages(e.target.value)} />
-                </div>
+               
             </div>
         )
     }

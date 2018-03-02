@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { Marker, InfoWindow } from 'google-maps-react';
 import axios from 'axios'
+import './Map.css'
 
 export default class Map2 extends Component {
     constructor(props) {
@@ -69,18 +70,9 @@ export default class Map2 extends Component {
     }
 
     render() {
-        console.log(this.state)
-        const style = {
-            width: '80%',
-            height: '290px',
-            position: 'center',
-            left: '75px',
-            top: '30px'
-        }
-
         return (
-            <div ref="map" style={style}>
-                Where did you have your adventure?
+            <div ref="map" className="Map_2">
+                Add the location of your Adventure
             </div>
         )
     }

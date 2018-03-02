@@ -1,0 +1,14 @@
+.input3{
+    width: 80%;
+    height: 200px;
+    box-sizing: border-box;
+    border: 2px solid black;
+    border-radius: 8px;
+    position: absolute;
+    top: 300px;
+    left: 85px;
+    background-color: #f8f8f8;
+    resize: vertical;
+    padding-left: 10px;
+    padding-top: 10px;
+}

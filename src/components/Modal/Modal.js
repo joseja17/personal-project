@@ -26,27 +26,19 @@ export default class Modal extends Component {
         console.log("THIS IS THIS.PROPS",this.props);
         return (
             <div className={this.props.modal ? "modal" : "modal-hidden"} >
-                <div className="Modal_header">
-                    
                     <header className="head">
-                    <button onClick={this.props.back} className="Modal_close_button">Back</button>
+                    <button  onClick={this.props.back} className="Modal_close_button"><img className="Back_button" src="./left-arrow.svg"/></button>
                         Share your story
                 </header>
-               
-                    <nav className="Modal_nav">
                         <ul className="Modal_list">
-                            <li className="Modal_list_item"><a className="Modal_name" onClick={() => this.handleModal(1)}>Adventure Place</a></li>
+                            <li className="Modal_list_item"><a className="Modal_name" onClick={() => this.handleModal(1)}>Location</a></li>
                             <li className="Modal_list_item"><a className="Modal_name" onClick={() => this.handleModal(2)}>Title</a></li>
                             <li className="Modal_list_item"><a className="Modal_name" onClick={() => this.handleModal(3)}>Details</a></li>
                             <li className="Modal_list_item"><a className="Modal_name" onClick={() => this.handleModal(4)}>Images</a></li>
                             <li className="Modal_list_item"><a className="Modal_name" onClick={() => this.handleModal(5)} >Submit your story</a></li>
                         </ul>
                         <div className="line"><hr /></div>
-
-                    </nav>
-                </div>
-                <div>
-
+                <div className="Modal_body">
                     {this.state.whichModalIsOpen === 1 ?
                         <Modal1 />
                         :
@@ -72,10 +64,7 @@ export default class Modal extends Component {
                         :
                         null
                     }
-
                 </div>
-
-
             </div>
         )
     }
