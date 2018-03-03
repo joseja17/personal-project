@@ -3,6 +3,7 @@
     width: 200px;
     height: 30px;
     border: none;
+    border-radius: 8px;
     font-size: 15px;
     position: absolute;
     top: 185px;
@@ -22,18 +23,18 @@
   
 .button-modal1 {
     margin-top: 15px;
-    width: 80px;
+    width: 120px;
     height: 30px;
-    border-radius: 5px;
-    background: white;
-   
-    font-size: 20px;
-    font-family: 'Overlock', cursive;
+    border-radius: 12px;
+    background: #658ca8;
+    font-size: 15px;
+    border: 1px solid black;
+    /* font-family: 'Overlock', cursive; */
     -webkit-transition-duration: 0.4s; 
     transition-duration: 0.4s;
     position: absolute;
     top: 172px;
-    right: 198px;
+    right: 150px;
   }
   
   .button-modal1:focus {

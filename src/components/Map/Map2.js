@@ -37,7 +37,7 @@ export default class Map2 extends Component {
             const mapRef = this.refs.map;
             const node = ReactDOM.findDOMNode(mapRef);
 
-            let zoom = 5;
+            let zoom = 4;
             // let lat = 40.296898;
             // let lng = -111.694649;
             let { initialCenter } = this.props;

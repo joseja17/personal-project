@@ -11,7 +11,7 @@ class Home extends Component {
         }
         this.handleModal = this.handleModal.bind(this);
     }
-    
+
     handleModal() {
         this.setState({
             working: !this.state.working
@@ -19,15 +19,14 @@ class Home extends Component {
     }
 
     render() {
-      
         return (
-            <div className="Home">
-                <Header></Header>
-              
-                    <img className="Home_logo" src="./logo1.png"/>
-            
-                <div className="button-box">
-                    <button className="btnadd" onClick={this.handleModal}>ADD YOUR ADVENTURE</button>
+            <div>
+                <div className={this.state.working ? "Home-open" : "Home"}>
+                    <Header></Header>
+                    <img className="Home_logo" src="./logo1.png" />
+                 
+                        <button className="btnadd" onClick={this.handleModal}>ADD AN ADVENTURE</button>
+                  
                 </div>
                 <Modal modal={this.state.working} back={this.handleModal}></Modal>
             </div>

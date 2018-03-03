@@ -5,35 +5,54 @@
     height: 100vh;
     background-size: cover;
 }
+.Home-open{
+    background: url('background3.JPG');
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    -webkit-filter: blur(3px);
+    -ms-filter: blur(3px);
+    -moz-filter: blur(3px);
+    -o-filter: blur(3px);
+    filter: blur(3px);
+}
 .Home_logo{
     width: 350px;
-    height: 400px;
-    position: center;
-    /* top: 60px;
-    right: 470px; */
+    height: 420px;
+    position: absolute;
+    top: 10px;
+    right: 470px;
 
 }
 
 .btnadd{
-    padding: 14px 14px;
-    background-color: white;
+    padding: 15px 15px;
+    background-color: #0001;
     color: black;
     font-weight: bold;
+    border: none;
+    /* border-radius: 12px; */
     border: 2px solid black;
-    font-family: 'Overlock', cursive;
+    font-family: 'Abel';
+    font-size: 19px;
     -webkit-transition-duration: 0.8s; 
     transition-duration: 0.8s;
+    position: absolute;
+    top: 360px;
+    right: 555px;
+    
 }
 
 .btnadd:hover{
-    background-color: black; 
+    background-color: #2d404e; 
     color: white;
-   
+    border: 2px solid black;
 }
+
 
 .button-box{
     position: center;
-   margin-top: -60px;
+   margin-top: -75px;
 }
 
 .avatar{

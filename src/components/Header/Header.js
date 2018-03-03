@@ -13,16 +13,16 @@ class Header extends Component {
         let { userData } = this.props;
         return (
             <div className="Header_header">
-            <li className="Header_list_item"><a className="Header_name" href="/#/home">Home</a></li>
-            <li className="Header_list_item"><a className="Header_name" href="/#/Adventures">Adventures</a></li>
-            <li className="Header_list_item"><a className="Header_name" href="/#/private">Map</a></li>
+            <li className="Header_list_item"><a className="Header_name" href="/#/home">HOME</a></li>
+            <li className="Header_list_item"><a className="Header_name" href="/#/Adventures">ADVENTURES</a></li>
+            <li className="Header_list_item"><a className="Header_name" href="/#/private">MAP</a></li>
             <span><a className="Header_name_name" >{userData.user_name ? userData.user_name : null}</a></span>
             {
                 userData.img ?
                     <img className='avatar' src={userData.img} /> :
                     null
             }
-           <a className="Header_name_logout" href={process.env.REACT_APP_LOGOUT}>Logout</a>
+           <a className="Header_name_logout" href={process.env.REACT_APP_LOGOUT}>LOGOUT</a>
         </div>
         )
     }

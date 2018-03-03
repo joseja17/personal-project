@@ -34,7 +34,7 @@
     color: black;
     position: absolute;
     right: 195px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
 }
 
 .Header_name_logout{
@@ -43,14 +43,18 @@
     padding: 0px 40px;
     position: absolute;
     right: 0px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: "Abel";
+    font-size: 19px;
+    font-weight: bold;
 }
 
 .Header_name{
     text-decoration: none;
     color: black;
     padding: 30px 40px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 19px;
+    font-family: "Abel";
+    font-weight: bold;
 }
 
 
