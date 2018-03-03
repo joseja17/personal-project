@@ -8,9 +8,9 @@
 .Home_logo{
     width: 350px;
     height: 400px;
-    position: absolute;
-    top: 60px;
-    right: 470px;
+    position: center;
+    /* top: 60px;
+    right: 470px; */
 
 }
 
@@ -32,9 +32,8 @@
 }
 
 .button-box{
-    position: absolute;
-    top: 380px;
-    right: 570px;
+    position: center;
+   margin-top: -60px;
 }
 
 .avatar{
