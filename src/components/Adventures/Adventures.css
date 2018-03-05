@@ -1,9 +1,9 @@
-*{
-    /* border: 0.1px solid red; */
-    /* margin: 0; */
-    /* padding: 0; */
-   
-}
+/* *{
+    border: 0.1px solid red;
+    margin: 0;
+    padding: 0;
+} */
+
 .Adventures{
   /* background: url('background4.jpg'); */
   width: 100%;
@@ -62,6 +62,7 @@
 .Delete-button{
   height: 20px;
   width: 25px;
+ 
 
 }
 .Modal-delete-button:focus {

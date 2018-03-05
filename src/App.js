@@ -17,7 +17,7 @@ class App extends Component {
             <Route path='/home' component={Home}/>
             <Route path='/private' component={Private}/>
             <Route path='/Adventures' component={Adventures}/>
-            <Route path='/payment' component={Stripe}/>
+            <Route path='/donations' component={Stripe}/>
          </Switch>
        </HashRouter>
       </div>

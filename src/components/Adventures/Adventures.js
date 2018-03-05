@@ -44,7 +44,6 @@ class Adventures extends Component {
                     <div>Location: {val.location} </div>                   
                     <p>{val.description}</p>
                     <button className="Modal-delete-button" onClick={() => this.deleteAdv(val.id)}><img className="Delete-button" src="./delete.svg"/></button>
-                    
                 </div>
             )
         })
