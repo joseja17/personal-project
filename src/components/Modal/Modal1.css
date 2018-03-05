@@ -9,6 +9,10 @@
     top: 185px;
     right: 290px;
     padding-left: 5px;
+    
+  }
+  .inputModal1:focus {
+    outline: none;
   }
 
 .Location_title{
@@ -23,18 +27,18 @@
   
 .button-modal1 {
     margin-top: 15px;
-    width: 120px;
-    height: 30px;
+    width: 80px;
+    height: 35px;
     border-radius: 12px;
-    background: #658ca8;
+    background: #0001;
     font-size: 15px;
     border: 1px solid black;
     /* font-family: 'Overlock', cursive; */
     -webkit-transition-duration: 0.4s; 
     transition-duration: 0.4s;
     position: absolute;
-    top: 172px;
-    right: 150px;
+    top: 168px;
+    right: 203px;
   }
   
   .button-modal1:focus {

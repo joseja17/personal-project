@@ -33,16 +33,18 @@ class Adventures extends Component {
     }
 
     render() {
-       
+                   
         let newAdv = this.state.adventures.map((val, i) => {
             return (
                 <div className="Adventures_box">
-                    <div>Name: {val.user_name}</div>
-                    <div>Place: {val.location} </div>
-                    <div>Date: {val.date}</div>
-                    <div>Title: {val.title}</div>
-                    <div>Description: {val.description}</div>
-                    <a><button onClick={() => this.deleteAdv(val.id)}>Delete</button></a>
+               
+                   <h2>{val.title}</h2>
+                    <h4>{val.user_name}</h4>
+                    <h6>{val.date}</h6>
+                    <div>Location: {val.location} </div>                   
+                    <p>{val.description}</p>
+                    <button className="Modal-delete-button" onClick={() => this.deleteAdv(val.id)}><img className="Delete-button" src="./delete.svg"/></button>
+                    
                 </div>
             )
         })

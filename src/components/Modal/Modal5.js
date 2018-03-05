@@ -1,7 +1,7 @@
 import axios from 'axios'
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
-import './Modal.css'
+import './Modal5.css'
 import {connect} from 'react-redux';
 
 class Modal5 extends Component {
@@ -30,12 +30,9 @@ gettingAdv(){
         console.log(this.props);
         return (
             <div>
+                <h1>Ready to share your adventure?</h1>
             <Link to="/Adventures">
-            <button className="button-modal" onClick={this.newAdventure}>Post Adventure</button>
-            </Link>
-
-           <Link to="private">
-              <button className="button-modal"> Login to Submit </button>
+            <button className="btn-post" onClick={this.newAdventure}>Post Adventure</button>
             </Link>
             </div>
 

@@ -1,0 +1,24 @@
+
+.btn-post{
+    padding: 15px 15px;
+    background-color:black;
+    color: white;
+    /* font-weight: bold; */
+    border: none;
+    /* border-radius: 12px; */
+    border: 1px solid black;
+    font-family: 'Lato';
+    font-size: 16px;
+    -webkit-transition-duration: 0.8s; 
+    transition-duration: 0.8s;
+    position: absolute;
+    top: 380px;
+    left: 330px;
+    
+}
+
+.btn-post:hover{
+    background-color: #0001; 
+    color: black;
+    border: 1px solid black;
+}

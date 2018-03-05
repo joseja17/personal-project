@@ -57,8 +57,9 @@ export default class Map extends Component {
                 const InfoWindow = new google.maps.InfoWindow({
 
                     content: `<h3>${this.state.adventures[i].title}</h3>
+                    <h4>${this.state.adventures[i].location}</h4>
                     <h6>${this.state.adventures[i].date}</h6>
-                    <a href={process.env.REACT_APP_REDIRECT} + "#/Adventures">See More</a>`,
+                    <a href="#/Adventures">See More</a>`,
                     maxWidth: 200
                 })
                 
@@ -78,7 +79,7 @@ export default class Map extends Component {
 
         const style = {
             width: '100%',
-            height: '400px'
+            height: '500px'
         }
 
         return (

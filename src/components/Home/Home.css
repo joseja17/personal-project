@@ -10,11 +10,12 @@
     width: 100%;
     height: 100vh;
     background-size: cover;
-    -webkit-filter: blur(3px);
-    -ms-filter: blur(3px);
-    -moz-filter: blur(3px);
-    -o-filter: blur(3px);
-    filter: blur(3px);
+    -webkit-filter: blur(1px);
+    -ms-filter: blur(1px);
+    -moz-filter: blur(1px);
+    -o-filter: blur(1px);
+    filter: blur(1px);
+    opacity: 0.5;
 }
 .Home_logo{
     width: 350px;
@@ -27,26 +28,26 @@
 
 .btnadd{
     padding: 15px 15px;
-    background-color: #0001;
+    background-color: #0000;
     color: black;
-    font-weight: bold;
+    /* font-weight: bold; */
     border: none;
     /* border-radius: 12px; */
-    border: 2px solid black;
-    font-family: 'Abel';
-    font-size: 19px;
+    border: 1px solid black;
+    font-family: 'Lato';
+    font-size: 16px;
     -webkit-transition-duration: 0.8s; 
     transition-duration: 0.8s;
     position: absolute;
     top: 360px;
-    right: 555px;
+    right: 545px;
     
 }
 
 .btnadd:hover{
     background-color: #2d404e; 
     color: white;
-    border: 2px solid black;
+    border: 1px solid black;
 }
 
 

@@ -9,6 +9,12 @@
     right: 105px;
     padding-left: 5px;
   }
+  .inputModal2_Title:focus {
+    outline: none;
+  }
+  .inputModal2_Date:focus {
+    outline: none;
+  }
   .inputModal2_Date {
     width: 165px;
     height: 32px;
@@ -17,7 +23,7 @@
     position: absolute;
     border-radius: 8px;
     top: 375px;
-    right: 315px;
+    right: 310px;
     padding-left: 5px;
   }
 

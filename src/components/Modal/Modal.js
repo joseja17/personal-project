@@ -27,14 +27,14 @@ export default class Modal extends Component {
             <div className={this.props.modal ? "modal" : "modal-hidden"} >
                     <header className="head">
                     <button  onClick={this.props.back} className="Modal_close_button"><img className="Back_button" src="./left-arrow.svg"/></button>
-                    Share your adventure
+                    SHARE YOUR ADVENTURE
                 </header>
                         <ul className="Modal_list">
-                            <li className="Modal_list_item"><a className="Modal_name" onClick={() => this.handleModal(1)}>Title</a></li>
-                            <li className="Modal_list_item"><a className="Modal_name" onClick={() => this.handleModal(2)}>Location</a></li>
-                            <li className="Modal_list_item"><a className="Modal_name" onClick={() => this.handleModal(3)}>Details</a></li>
-                            <li className="Modal_list_item"><a className="Modal_name" onClick={() => this.handleModal(4)}>Images</a></li>
-                            <li className="Modal_list_item"><a className="Modal_name" onClick={() => this.handleModal(5)} >Submit</a></li>
+                            <li className="Modal_list_item" onClick={() => this.handleModal(1)}>Title</li>
+                            <li className="Modal_list_item" onClick={() => this.handleModal(2)}>Location</li>
+                            <li className="Modal_list_item" onClick={() => this.handleModal(3)}>Details</li>
+                            <li className="Modal_list_item" onClick={() => this.handleModal(4)}>Images</li>
+                            <li className="Modal_list_item" onClick={() => this.handleModal(5)} >Submit</li>
                         </ul>
                         <div className="line"><hr /></div>
                 <div className="Modal_body">

@@ -9,7 +9,7 @@ class Modal3 extends Component {
     render() {
         return (
             <div className="Modal3_body">
-             <div className="Details">Details of your story:</div>
+             <div className="Details-Title">Details of your story:</div>
             <textarea  onChange={ ( e ) => this.props.getDetails( e.target.value ) }  placeholder="Your story here ..." className="input3"/>
             </div>
 

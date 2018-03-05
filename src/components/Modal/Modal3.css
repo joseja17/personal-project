@@ -1,14 +1,24 @@
 .input3{
     width: 80%;
-    height: 200px;
+    height: 210px;
     box-sizing: border-box;
     border: 2px solid black;
     border-radius: 8px;
     position: absolute;
-    top: 300px;
+    font-size: 18px;
+    top: 260px;
     left: 85px;
     background-color: #f8f8f8;
     resize: vertical;
     padding-left: 10px;
     padding-top: 10px;
+}
+.input3:focus {
+    outline: none;
+  }
+
+.Details-Title{
+    position: absolute;
+    top: 200px;
+    left: 320px;
 }

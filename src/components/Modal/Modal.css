@@ -23,6 +23,7 @@
     width: 0;
     height: 0;
     transition: all 1s;
+    
 }
 .head{
     /* background-color: #0005; */
@@ -31,32 +32,29 @@
     border: 1px solid black;
     border-radius: 12px;
     font-size: 30px;
-    font-family: 'League+Script';
+    font-family: 'Abel';
 }
 .Modal_list{
     margin: 0px -14px;
     position: absolute;
     top: 82px;
-    left: 10px;
+    left: 20px;
 }
 
 .Modal_list_item{
-padding: 30px 10px;
+padding: 30px 45px;
     list-style-type: none;
     display: inline-block;
-    transition: 0.8s all;
+    /* display: flex; */
+   
 }
 .Modal_list_item:hover{
     background-color: black;
     cursor: pointer;
-}
-.Modal_name{
-    text-decoration: none;
     color: white;
-    /* border: 1px solid yellow; */
-    padding: 25px;
-    margin: 11.1px;
+    transition: 0.8s all;
 }
+
 .line{
     margin: 85px 10px;
 }
@@ -75,7 +73,7 @@ padding: 30px 10px;
       position: absolute;
       left: 15px;
       top: 22px;
-      background:#48b19b;
+      background:#0000;
     border: none;
     cursor: pointer;
   }

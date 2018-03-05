@@ -5,8 +5,7 @@
    
 }
 .Adventures{
-  border: 1px solid yellow;
-  /* background: url('img1.JPG'); */
+  /* background: url('background4.jpg'); */
   width: 100%;
   height: 100vh;
   background-size: cover;
@@ -19,28 +18,35 @@
 }
 
 .Adventures_box{
-    
+     /* background: url('adventures.png'); */
   flex-direction: column;
   min-width: 300px;
   min-height: 200px;
-  margin-top: 20px;
- margin-left: 200px;
+  margin-top: 40px;
+ margin-left: 20px;
+ margin-bottom: 15px;
  width: 0px;
- padding: 20px 20px;
- border: none;
- box-shadow: 0 10px 30px 0 #C7CBDC;
+ padding: 10px 20px 40px 20px;
+ border: 2px solid black;
+ font-weight: bold;
+ box-shadow: 0 5px 30px 0 black;
 }
 .button-adv {
-    margin-top: 5px;
-    width: 40px;
-    height: 40px;
-    border-radius: 5px;
-    background: white;
-    font-weight: bold;
-    font-size: 12px;
-    font-family: 'Overlock', cursive;
-    -webkit-transition-duration: 0.4s; 
-    transition-duration: 0.4s;
+  padding: 15px 15px;
+  background-color: #0000;
+  color: black;
+  /* font-weight: bold; */
+  border: none;
+  /* border-radius: 12px; */
+  border: 1px solid black;
+  font-family: 'Lato';
+  font-size: 16px;
+  -webkit-transition-duration: 0.8s; 
+  transition-duration: 0.8s;
+  position: absolute;
+  top: 15px;
+  left: 600px;
+  font-weight: bold;
   }
   
   .button-adv:focus {
@@ -52,3 +58,19 @@
     color: white;
     font-weight: bold;
   }
+  
+.Delete-button{
+  height: 20px;
+  width: 25px;
+
+}
+.Modal-delete-button:focus {
+  outline: none;
+}
+
+.Modal-delete-button{
+  /* margin-right: 0px; */
+    background: #0000;
+  border: none;
+  cursor: pointer;
+}

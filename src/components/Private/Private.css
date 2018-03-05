@@ -7,17 +7,21 @@
 }
 
 .button-markers {
-    margin-top: 15px;
-    width: 175px;
-    height: 40px;
-    font-size: 18px;
-    background-color: white;
-    color: black;
-    font-weight: bold;
-    border: 2px solid black;
-    font-family: 'Overlock', cursive;
-    -webkit-transition-duration: 0.8s; 
-    transition-duration: 0.8s;
+  padding: 15px 15px;
+  background-color: #0000;
+  color: black;
+  /* font-weight: bold; */
+  border: none;
+  /* border-radius: 12px; */
+  border: 1px solid black;
+  font-family: 'Lato';
+  font-size: 16px;
+  -webkit-transition-duration: 0.8s; 
+  transition-duration: 0.8s;
+  position: absolute;
+  top: 15px;
+  left: 600px;
+  font-weight: bold;
   }
   
   .button-markers:focus {
