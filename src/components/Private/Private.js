@@ -12,8 +12,10 @@ class Private extends Component {
     render() {
         return (
             <div className="Private">
-               <Header></Header>
-                <MapContainer></MapContainer>
+                <Header></Header>
+                <div>
+                    <MapContainer></MapContainer>
+                </div>
                 <div>
                     <button className="button-markers" onClick={() => this.pageLoad()}>Get Markers</button>
                 </div>

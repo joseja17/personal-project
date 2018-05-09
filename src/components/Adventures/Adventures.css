@@ -30,7 +30,7 @@
  border: 2px solid black;
  font-weight: bold;
  overflow: auto;
- box-shadow: 0 5px 30px 0 black;
+ box-shadow: 0 5px 10px 0 black;
 }
 .button-adv {
   padding: 15px 15px;
