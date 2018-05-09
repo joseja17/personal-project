@@ -32,6 +32,7 @@ module.exports = {
         })
     },
 
+
     delete: (req, res) => {
         const db = req.app.get('db');
         db.delete_adventures([req.params.id]).then(resp => {

@@ -21,7 +21,7 @@
      /* background: url('adventures.png'); */
   flex-direction: column;
   min-width: 300px;
-  min-height: 200px;
+  height: 250px;
   margin-top: 40px;
  margin-left: 20px;
  margin-bottom: 15px;
@@ -29,6 +29,7 @@
  padding: 10px 20px 40px 20px;
  border: 2px solid black;
  font-weight: bold;
+ overflow: auto;
  box-shadow: 0 5px 30px 0 black;
 }
 .button-adv {
@@ -62,7 +63,13 @@
 .Delete-button{
   height: 20px;
   width: 25px;
- 
+   
+
+}
+.Edit-button{
+  height: 20px;
+  width: 25px;
+   
 
 }
 .Modal-delete-button:focus {

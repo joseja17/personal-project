@@ -1,5 +1,5 @@
-
-.btn-post{
+/* Desktop */
+.btn-post-d{
     padding: 15px 15px;
     background-color:black;
     color: white;
@@ -12,12 +12,35 @@
     -webkit-transition-duration: 0.8s; 
     transition-duration: 0.8s;
     position: absolute;
-    top: 380px;
-    left: 330px;
-    
+    top: 340px;
+    left: 265px;
 }
 
-.btn-post:hover{
+.btn-post-d:hover{
+    background-color: #0001; 
+    color: black;
+    border: 1px solid black;
+}
+
+/* Tablet */
+.btn-post-t{
+    padding: 15px 15px;
+    background-color:black;
+    color: white;
+    /* font-weight: bold; */
+    border: none;
+    /* border-radius: 12px; */
+    border: 1px solid black;
+    font-family: 'Lato';
+    font-size: 16px;
+    -webkit-transition-duration: 0.8s; 
+    transition-duration: 0.8s;
+    position: absolute;
+    top: 340px;
+    left: 235px;
+}
+
+.btn-post-t:hover{
     background-color: #0001; 
     color: black;
     border: 1px solid black;

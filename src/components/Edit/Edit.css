@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css?family=Overlock');
+
+.edit-page {
+    background-color: white;
+    text-align: center;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.edit-box {
+    height: 480px;
+    width: 386px;
+  margin: auto;
+  margin-top: 40px;
+ border: none;
+ box-shadow: 0 10px 30px 0 #C7CBDC;
+}
+
+.edit-your-adv {
+	color: #525566;
+    font-family: 'Overlock', cursive;
+	font-size: 19px;
+    padding: 0;
+}
+
+.edit-adv-h4 {
+	height: 15px;
+	width: 77px;
+	color: #4A4A4A;
+    font-family: 'Overlock', cursive;
+	font-size: 14px;
+    margin-bottom: 6px;
+    margin-left: 5px;
+    margin-top: 4px;
+    padding-left: 0;
+}
+
+.creat-input {
+    border: none;
+    box-shadow: none;
+	height: 36px;
+    width: 355px;
+     padding-left: 10px;
+	border-radius: 10px;
+    background-color: #F2F4FC;
+	font-family: 'Roboto', 'sans-serif';
+	font-size: 13.5px;
+    font-style: italic;
+} 
+
+.creat-input:placeholder {
+    color: #9B9B9B;
+    font-size: 12px;
+}
+
+.creat-input:focus{
+    outline: none;
+}
+
+.search-btn{
+    width: 60px;
+    height: 25px;
+    border-radius: 5px;
+    background: white;
+    font-weight: bold;
+    font-size: 13px;
+    font-family: 'Overlock', cursive;
+    -webkit-transition-duration: 0.4s; 
+    transition-duration: 0.4s;
+    margin-top: 5px;
+}
+
+.search-btn:focus {
+    outline: none;
+  }
+
+  .search-btn:hover{
+    background-color: black; 
+    color: white;
+    font-weight: bold;
+  }
+
+
+.button-save {
+    width: 60px;
+    height: 25px;
+    border-radius: 5px;
+    background: white;
+    font-weight: bold;
+    font-size: 15px;
+    font-family: 'Overlock', cursive;
+    -webkit-transition-duration: 0.4s; 
+    transition-duration: 0.4s;
+  }
+  
+  .button-save:focus {
+    outline: none;
+  }
+
+  .button-save:hover{
+    background-color: black; 
+    color: white;
+    font-weight: bold;
+  }
+
+  .button-cancel {
+    width: 60px;
+    height: 25px;
+    border-radius: 5px;
+    color: white;
+    background: red;
+    border: none;
+    /* font-weight: bold; */
+    font-size: 13px;
+    font-family: 'Overlock', cursive;
+    -webkit-transition-duration: 0.4s; 
+    transition-duration: 0.4s;
+    /* margin-top: 20px; */
+    margin: 15px;
+  }
+  
+  .button-cancel:focus {
+    outline: none;
+  }
+
+  .button-cancel:hover{
+    background-color: lightgray; 
+    color: black;
+    font-weight: bold;
+  
+  }
+

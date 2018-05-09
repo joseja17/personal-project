@@ -1,8 +1,12 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { Marker, InfoWindow } from 'google-maps-react';
-import axios from 'axios'
-import './Map.css'
+import axios from 'axios';
+import './Map.css';
+import Responsive from 'react-responsive';
+
+const Desktop = props => <Responsive {...props} minWidth={992} />
+const Tablet = props => <Responsive {...props} minWidth={1} maxWidth={991} />
 
 export default class Map2 extends Component {
     constructor(props) {
@@ -71,8 +75,17 @@ export default class Map2 extends Component {
 
     render() {
         return (
-            <div ref="map" className="Map_2">
+            <div>
+            <Desktop>
+            <div ref="map" className="Map_2-d">
                 Add the location of your Adventure
+            </div>
+            </Desktop>
+            <Tablet>
+            <div ref="map" className="Map_2-t">
+                Add the location of your Adventure
+            </div>
+            </Tablet>
             </div>
         )
     }

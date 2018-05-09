@@ -47,6 +47,21 @@
     font-size: 15px;
     /* font-weight: bold; */
 }
+.Header_name_login:hover{
+    color: white;
+    background-color: black;
+    transition: 0.8s all;
+}
+.Header_name_login{
+    text-decoration: none;
+    color: black;
+    padding: 0px 40px;
+    position: absolute;
+    right: 0px;
+    font-family: "Lato";
+    font-size: 15px;
+    /* font-weight: bold; */
+}
 
 .Header_name{
     text-decoration: none;

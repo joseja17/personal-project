@@ -49,7 +49,7 @@ export default class Map extends Component {
             // for loop starts here
             for (var i = 0; i < this.state.adventures.length; i++) {
                 const marker = new google.maps.Marker({
-                    position: { lat: parseInt(this.state.adventures[i].latitud), lng: parseInt(this.state.adventures[i].longitud) },
+                    position: { lat: parseInt(this.state.adventures[i].latitud, 10), lng: parseInt(this.state.adventures[i].longitud, 10) },
                     map: this.map,
                     animation: google.maps.Animation.DROP,
                     title: 'Click for more details.',

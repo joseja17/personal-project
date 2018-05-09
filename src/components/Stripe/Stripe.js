@@ -27,7 +27,7 @@ class Stripe extends Component {
     render() {
       return (
         <div className="Stripe-box">
-        <Link to='/home'><img className="Exit-button" src="./exit.svg"/></Link>
+        <Link to='/'><img alt="" className="Exit-button" src="./exit.svg"/></Link>
         <h3>How much do you want to donate?</h3>
        <input className="currencyinput" placeholder="$" onChange={(e)=>{this.changeAmount(e.target.value)}}/>
           <StripeCheckout className="sc"

@@ -1,4 +1,6 @@
-.inputModal2_Title {
+
+/* Desktop */
+.inputModal2_Title-d {
     width: 565px;
     height: 30px;
     border: 1px solid black;
@@ -6,16 +8,16 @@
     position: absolute;
     border-radius: 8px;
     top: 250px;
-    right: 105px;
+    right: 55px;
     padding-left: 5px;
   }
-  .inputModal2_Title:focus {
+  .inputModal2_Title-d:focus {
     outline: none;
   }
-  .inputModal2_Date:focus {
+  .inputModal2_Date-d:focus {
     outline: none;
   }
-  .inputModal2_Date {
+  .inputModal2_Date-d {
     width: 165px;
     height: 32px;
     border: 1px solid black;
@@ -23,24 +25,71 @@
     position: absolute;
     border-radius: 8px;
     top: 375px;
-    right: 310px;
+    right: 275px;
     padding-left: 5px;
   }
 
-  .Date_Title{
+  .Date_Title-d{
     width: 100px;
     height: 40px;
     position: absolute;
     top: 320px;
-    right: 350px;
+    right: 310px;
     /* border: 1px solid red ; */
 }
-.Title_Title{
+.Title_Title-d{
     width: 100px;
     height: 40px;
     position: absolute;
     top: 200px;
-    right: 350px;
+    right: 310px;
     /* border: 1px solid red ; */
+}
 
+/* Tablet */
+
+.inputModal2_Title-t {
+  width: 460px;
+  height: 30px;
+  border: 1px solid black;
+  font-size: 15px;
+  position: absolute;
+  border-radius: 8px;
+  top: 250px;
+  right: 65px;
+  padding-left: 5px;
+}
+.inputModal2_Title-t:focus {
+  outline: none;
+}
+.inputModal2_Date-t:focus {
+  outline: none;
+}
+.inputModal2_Date-t {
+  width: 145px;
+  height: 32px;
+  border: 1px solid black;
+  font-size: 15px;
+  position: absolute;
+  border-radius: 8px;
+  top: 375px;
+  right: 225px;
+  padding-left: 5px;
+}
+
+.Date_Title-t{
+  width: 100px;
+  height: 40px;
+  position: absolute;
+  top: 320px;
+  right: 250px;
+  /* border: 1px solid red ; */
+}
+.Title_Title-t{
+  width: 100px;
+  height: 40px;
+  position: absolute;
+  top: 200px;
+  right: 250px;
+  /* border: 1px solid red ; */
 }

@@ -1,4 +1,32 @@
-.input3{
+/* Desktop */
+.input3-d{
+    width: 80%;
+    height: 230px;
+    box-sizing: border-box;
+    border: 2px solid black;
+    border-radius: 8px;
+    position: absolute;
+    font-size: 18px;
+    top: 260px;
+    left: 70px;
+    background-color: #f8f8f8;
+    resize: vertical;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+.input3-d:focus {
+    outline: none;
+  }
+
+.Details-Title-d{
+    position: absolute;
+    top: 200px;
+    left: 250px;
+    font-size: 20px;
+}
+
+/* Tablet */
+.input3-t{
     width: 80%;
     height: 210px;
     box-sizing: border-box;
@@ -6,19 +34,19 @@
     border-radius: 8px;
     position: absolute;
     font-size: 18px;
-    top: 260px;
-    left: 85px;
+    top: 245px;
+    left: 65px;
     background-color: #f8f8f8;
     resize: vertical;
     padding-left: 10px;
     padding-top: 10px;
 }
-.input3:focus {
+.input3-t:focus {
     outline: none;
   }
 
-.Details-Title{
+.Details-Title-t{
     position: absolute;
     top: 200px;
-    left: 320px;
+    left: 225px;
 }

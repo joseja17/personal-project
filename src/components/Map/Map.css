@@ -1,7 +1,15 @@
-.Map_2{
+.Map_2-d{
  width: 90%;
- height: 330px;
+ height: 300px;
  position: absolute;
- left: 40px;
- top: 250px;
+ left: 30px;
+ top: 240px;
 }
+
+.Map_2-t{
+    width: 85%;
+    height: 260px;
+    position: absolute;
+    left: 45px;
+    top: 225px;
+   }

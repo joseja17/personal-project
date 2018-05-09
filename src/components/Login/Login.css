@@ -1,25 +1,31 @@
 @import url('https://fonts.googleapis.com/css?family=Overlock');
-.box {
+
+/* Desktop */
+.login-page-d {
+  background-color: white;
+  text-align: center;
+  background: white;
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
-  min-width: 350px;
-  margin-top: 80px;
-  margin-left: 450px;
-  margin-right: 450px;
- padding-bottom: 50px;
- border: none;
- box-shadow: 0 10px 30px 0 #C7CBDC;
+  flex-wrap: nowrap;
 }
 
-.img {
+.login-box-d {
+  height: 420px;
+  width: 386px;
+  box-shadow: 0 10px 30px 0 #C7CBDC;
+margin: auto;
+margin-top: 60px;
+border: none;
+}
+
+.img-d {
   margin: 50px;
   width: 250px;
 }
 
-.button-login {
-    width: 175px;
+.button-login-d {
+    width: 145px;
     height: 40px;
     border-radius: 5px;
     background: white;
@@ -30,12 +36,58 @@
     transition-duration: 0.4s;
   }
   
-  .button-login:focus {
+  .button-login-d:focus {
     outline: none;
   }
 
-  .button-login:hover{
+  .button-login-d:hover{
     background-color: black; 
     color: white;
     font-weight: bold;
   }
+
+  /* Tablet */
+  .login-page-t {
+    background-color: white;
+    text-align: center;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+  
+  .login-box-t {
+    height: 420px;
+    width: 346px;
+    box-shadow: 0 10px 30px 0 #C7CBDC;
+  margin: auto;
+  margin-top: 70px;
+  border: none;
+  }
+  
+  .img-t {
+    margin: 50px;
+    width: 250px;
+  }
+  
+  .button-login-t {
+      width: 125px;
+      height: 40px;
+      border-radius: 5px;
+      background: white;
+      font-weight: bold;
+      font-size: 20px;
+      font-family: 'Overlock', cursive;
+      -webkit-transition-duration: 0.4s; 
+      transition-duration: 0.4s;
+    }
+    
+    .button-login-t:focus {
+      outline: none;
+    }
+  
+    .button-login-t:hover{
+      background-color: black; 
+      color: white;
+      font-weight: bold;
+    }

@@ -1,15 +1,27 @@
 @import url('https://fonts.googleapis.com/css?family=Overlock');
-.Home{
-    background: url('background3.JPG');
-    width: 100%;
-    height: 100vh;
+
+/* Desktop */
+.Home-d{
+    background-image: url('background3.JPG');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
 }
-.Home-open{
-    background: url('background3.JPG');
-    width: 100%;
-    height: 100vh;
+.Home-open-d{
+    background-image: url('background3.JPG');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
     -webkit-filter: blur(1px);
     -ms-filter: blur(1px);
     -moz-filter: blur(1px);
@@ -17,44 +29,40 @@
     filter: blur(1px);
     opacity: 0.5;
 }
-.Home_logo{
-    width: 350px;
-    height: 420px;
-    position: absolute;
-    top: 10px;
-    right: 470px;
-
+.Home_logo-d{
+    width: 330px;
+    height: 400px;
+    margin: auto;
+    margin-top: -40px;
 }
 
-.btnadd{
-    padding: 15px 15px;
-    background-color: #0000;
-    color: black;
-    /* font-weight: bold; */
+.btnadd-d{
+    width: 200px;
+    height: 50px;
+    background-color: #0005;
+    color: white;
+    font-weight: bold;
     border: none;
-    /* border-radius: 12px; */
-    border: 1px solid black;
+    border: 2px solid white;
     font-family: 'Lato';
     font-size: 16px;
     -webkit-transition-duration: 0.8s; 
-    transition-duration: 0.8s;
-    position: absolute;
-    top: 360px;
-    right: 545px;
-    
+    transition-duration: 0.4s;
+   margin: auto;
+   margin-top: -230px;
 }
 
-.btnadd:hover{
-    background-color: #2d404e; 
+.btnadd-d:hover{
+    background-color: black; 
     color: white;
-    border: 1px solid black;
+    border: 2 solid white;
+    font-weight: bold;
 }
 
-
-.button-box{
+/* .button-box-d{
     position: center;
    margin-top: -75px;
-}
+} */
 
 .avatar{
     border-radius: 50%;
@@ -64,21 +72,112 @@
     top: 25px;
     right: 145px;
 }
-.Home_title{
+/* .Home_title-d{
     position: absolute;
     top: 220px;
     right: 450px;
     width: 380px;    
-}
+} */
 
-.Donation-button{
+.Donation-button-d{
     height: 30px;
     width: 45px;
     position: absolute;
     bottom: 20px;
     right: 15px; 
   }
-  .Donation-button:focus {
+  .Donation-button-d:focus {
+    outline: none;
+  }
+
+  /* Tablet */
+  .Home-t{
+    background-image: url('background3.JPG');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+.Home-open-t{
+    background-image: url('background3.JPG');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    -webkit-filter: blur(1px);
+    -ms-filter: blur(1px);
+    -moz-filter: blur(1px);
+    -o-filter: blur(1px);
+    filter: blur(1px);
+    opacity: 0.5;
+}
+.Home_logo-t{
+    width: 300px;
+    height: 370px;
+    margin: auto;
+    margin-top: -50px;
+}
+
+.btnadd-t{
+    width: 200px;
+    height: 50px;
+    background-color: #0005;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border: 1px solid black;
+    font-family: 'Lato';
+    font-size: 16px;
+    -webkit-transition-duration: 0.8s; 
+    transition-duration: 0.8s;
+    margin: auto;
+    margin-top: -250px;
+}
+
+.btnadd-t:hover{
+    background-color: black; 
+    color: white;
+    border: 2 solid white;
+    font-weight: bold;
+}
+
+
+/* .button-box-t{
+    position: center;
+   margin-top: -75px;
+} */
+
+.avatar-t{
+    border-radius: 50%;
+    height: 35px;
+    width: 35px;
+    position: absolute;
+    top: 25px;
+    right: 145px;
+}
+/* .Home_title-t{
+    position: absolute;
+    top: 220px;
+    right: 450px;
+    width: 380px;    
+} */
+
+.Donation-button-t{
+    height: 30px;
+    width: 45px;
+    position: absolute;
+    bottom: 20px;
+    right: 15px; 
+  }
+  .Donation-button-t:focus {
     outline: none;
   }
  

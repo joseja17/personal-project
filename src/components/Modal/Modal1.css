@@ -1,5 +1,6 @@
 
-.inputModal1 {
+/* Desktop */
+.inputModal1-d {
     width: 200px;
     height: 30px;
     border: none;
@@ -7,25 +8,25 @@
     font-size: 15px;
     position: absolute;
     top: 185px;
-    right: 290px;
+    right: 245px;
     padding-left: 5px;
     
   }
-  .inputModal1:focus {
+  .inputModal1-d:focus {
     outline: none;
   }
 
-.Location_title{
+.Location_title-d{
     width: 100px;
     height: 40px;
     position: absolute;
     top: 190px;
-    left: 215px;
+    left: 145px;
     /* border: 1px solid red ; */
 
 }
   
-.button-modal1 {
+.button-modal1-d {
     margin-top: 15px;
     width: 80px;
     height: 35px;
@@ -38,14 +39,66 @@
     transition-duration: 0.4s;
     position: absolute;
     top: 168px;
-    right: 203px;
+    right: 160px;
   }
   
-  .button-modal1:focus {
+  .button-modal1-d:focus {
     outline: none;
   }
 
-  .button-modal1:hover{
+  .button-modal1-d:hover{
+    background-color: black; 
+    color: white;
+    font-weight: bold;
+  }
+
+  /* Tablet */
+  .inputModal1-t {
+    width: 180px;
+    height: 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    position: absolute;
+    top: 185px;
+    right: 205px;
+    padding-left: 5px;
+    
+  }
+  .inputModal1-t:focus {
+    outline: none;
+  }
+
+.Location_title-t{
+    width: 100px;
+    height: 40px;
+    position: absolute;
+    top: 190px;
+    left: 120px;
+    /* border: 1px solid red ; */
+}
+
+.button-modal1-t {
+    margin-top: 15px;
+    width: 70px;
+    height: 35px;
+    border-radius: 12px;
+    background: #0001;
+    font-size: 14px;
+    border: 1px solid black;
+    /* font-family: 'Overlock', cursive; */
+    -webkit-transition-duration: 0.4s; 
+    transition-duration: 0.4s;
+    position: absolute;
+    top: 168px;
+    right: 125px;
+  }
+  
+  .button-modal1-t:focus {
+    outline: none;
+  }
+
+  .button-modal1-t:hover{
     background-color: black; 
     color: white;
     font-weight: bold;
