@@ -56,9 +56,9 @@ class Adventures extends Component {
             })
         })
     }
-    pageLoad() {
-        window.location.reload(true)
-    }
+    // pageLoad() {
+    //     window.location.reload(true)
+    // }
 
     deleteAdv(id) {
         var r = window.confirm('Are you sure you want to delete this Adventure?');
@@ -118,7 +118,8 @@ class Adventures extends Component {
                         <button className="all-btn" disabled={this.state.all} onClick={()=>this.seeAll()}>SHOW ALL ADVENTURES</button>
                     </div>
                         :
-                        <button className="all-btn" disabled={!this.state.on} onClick={() => this.pageLoad()}>SHOW ALL ADVENTURES</button>
+                        // <button className="all-btn" disabled={!this.state.on} onClick={() => this.pageLoad()}>SHOW ALL ADVENTURES</button>
+                        null
                     }
                 </div>
                 {this.state.always
