@@ -10,14 +10,49 @@ class Adventures extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            adventures: []
+            adventures: [],
+            personalAdv: [],
+            pers: false,
+            all: false, 
+            always: true,
+            on: true
+
         }
     }
     componentDidMount() {
+        setTimeout(() => {
+            axios.get('/api/adventures').then(resp => {
+                console.log(resp)
+                this.setState({
+                    adventures: resp.data,
+                    on: false
+                })
+            })
+            
+        }, 1050);
+    }
+
+    seeAll() {
         axios.get('/api/adventures').then(resp => {
             console.log(resp)
             this.setState({
-                adventures: resp.data
+                adventures: resp.data,
+                all : !this.state.all,
+                pers: false, 
+                always: false
+            })
+        })
+    }
+
+    getAdv() {
+ 
+        axios.get('/api/adventure/' + this.props.userData.id ).then(resp => {
+            console.log(resp);
+            this.setState({
+               personalAdv: resp.data,
+               pers: !this.state.pers,
+               all: false, 
+               always:false
             })
         })
     }
@@ -31,8 +66,9 @@ class Adventures extends Component {
 
             axios.delete('/api/adventures/' + id).then(resp => {
                 this.setState({
-                    adventures: resp.data
+                    personalAdv: resp.data
                 })
+                window.location.reload(true)
             })
         }
     }
@@ -42,8 +78,21 @@ class Adventures extends Component {
         let newAdv = this.state.adventures.map((val, i) => {
             return (
                 <div key={i} className="Adventures_box">
-                    {userData.user_name
-                        ?
+                        <div>
+                            <h2>{val.title}</h2>
+                            <h4>{val.user_name}</h4>
+                            <h6>{val.date}</h6>
+                            <div>Location: {val.location} </div>
+                            <p>{val.description}</p>
+                        </div>
+                </div>
+            )
+        })
+
+        let persAdv = this.state.personalAdv.map((val, i) => {
+            return (
+                <div key={i} className="Adventures_box">
+                
                         <div>
                             <h2>{val.title}</h2>
                             <h4>{val.user_name}</h4>
@@ -53,31 +102,56 @@ class Adventures extends Component {
                             <button className="Modal-delete-button" onClick={() => this.deleteAdv(val.id)}><img alt="" className="Delete-button" src="./delete.svg" /></button>
                             <Link to={'edit/'+val.id}><img className="Edit-button" alt="" src="./edit.svg"/></Link>
                         </div>
-                        :
-                        <div>
-                            <h2>{val.title}</h2>
-                            <h4>{val.user_name}</h4>
-                            <h6>{val.date}</h6>
-                            <div>Location: {val.location} </div>
-                            <p>{val.description}</p>
-                        </div>
-
-                    }
+                       
                 </div>
             )
         })
+
         return (
             <div className="Adventures">
                 <Header></Header>
                 <div>
-                    <button className="button-adv" onClick={() => this.pageLoad()}>Show all</button>
+                    {userData.user_name
+                    ?
+                    <div>
+                        <button className="pers-btn" disabled={this.state.pers} onClick={()=>this.getAdv()}>SHOW MY OWN ADVENTURES</button>
+                        <button className="all-btn" disabled={this.state.all} onClick={()=>this.seeAll()}>SHOW ALL ADVENTURES</button>
+                    </div>
+                        :
+                        <button className="all-btn" disabled={!this.state.on} onClick={() => this.pageLoad()}>SHOW ALL ADVENTURES</button>
+                    }
                 </div>
-                <div className="Adventures_body">
+                {this.state.always
+                ?
+                <div className="Adventures_body">                
                     {newAdv}
                 </div>
-            </div>
+                    :
+                    null
+
+                }
+                
+                    {this.state.pers
+                    ?
+                <div className="Adventures_body">                
+                    {persAdv}
+                </div>
+                    :
+                    null
+                    }
+                    {this.state.all
+                    ?
+                    <div className="Adventures_body">                
+                    {newAdv}
+                </div>
+                    :
+                    null
+                }
+                </div>
+               
         )
     }
+
 }
 function mapStateToProps(state) {
     return {

@@ -132,6 +132,15 @@ app.get('/api/adventures/:id', (req, res) => {
     })
 })
 
+app.get('/api/adventure/:id', (req, res) => {
+    console.log(req.params.id)
+    const db = req.app.get('db');
+    db.get_pers_adv([req.params.id]).then(resp => {
+        console.log(resp);
+        res.status(200).send(resp);
+    })
+})
+
 app.put('/api/adventures/:id', (req, res) => {
     console.log(req.body);
     const db = req.app.get('db');

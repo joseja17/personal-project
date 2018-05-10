@@ -14,10 +14,10 @@ class Private extends Component {
             <div className="Private">
                 <Header></Header>
                 <div>
-                    <MapContainer></MapContainer>
+                    <button className="button-markers" onClick={() => this.pageLoad()}>Get Markers</button>
                 </div>
                 <div>
-                    <button className="button-markers" onClick={() => this.pageLoad()}>Get Markers</button>
+                    <MapContainer></MapContainer>
                 </div>
             </div>
         )

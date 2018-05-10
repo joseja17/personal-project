@@ -1,8 +1,3 @@
-/* *{
-    border: 0.1px solid red;
-    margin: 0;
-    padding: 0;
-} */
 
 .Adventures{
   /* background: url('background4.jpg'); */
@@ -82,3 +77,61 @@
   border: none;
   cursor: pointer;
 }
+
+.pers-btn {
+  width: 130px;
+  height: 39px;
+  border-radius: 5px;
+  background: white;
+  font-weight: bold;
+  font-size: 13px;
+  font-family: 'Overlock';
+  border-color: black;
+  -webkit-transition-duration: 0.4s; 
+  transition-duration: 0.4s;
+}
+
+.pers-btn:focus {
+  outline: none;
+}
+
+.pers-btn:hover:enabled{
+  background-color: black; 
+  color: white;
+  font-weight: bold;
+}
+
+.pers-btn:disabled {
+  background: #dddddd;
+ }
+
+.all-btn {
+  width: 130px;
+  height: 39px;
+  border-radius: 5px;
+  color: black;
+  background: rgb(189, 243, 250);
+  font-weight: bold;
+  border-color: black;
+  font-size: 13px;
+  font-family: 'Overlock';
+  -webkit-transition-duration: 0.4s; 
+  transition-duration: 0.4s;
+  margin: 15px;
+}
+
+.all-btn:focus {
+  outline: none;
+}
+.all-btn:disabled {
+ background: #dddddd;
+}
+
+.all-btn:hover:enabled{
+  background-color: black; 
+  color: white;
+  font-weight: bold;
+
+}
+
+

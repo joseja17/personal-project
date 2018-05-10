@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { Marker, InfoWindow } from 'google-maps-react';
 import axios from 'axios';
+import '../Private/Private.css';
 
 
 export default class Map extends Component {
@@ -77,14 +78,13 @@ export default class Map extends Component {
 
     render() {
 
-        const style = {
-            width: '100%',
-            height: '500px'
-        }
+       
 
         return (
-            <div ref="map" style={style}>
+            <div className="mapita" ref="map" >
+            <div className="titulo">
                 Loading map...
+            </div>
             </div>
         )
     }

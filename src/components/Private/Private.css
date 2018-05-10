@@ -6,23 +6,20 @@
     background-color: lightblue;
 }
 
-.button-markers {
-  padding: 15px 15px;
-  background-color: #0000;
+.button-markers{
+  width: 130px;
+  height: 39px;
+  border-radius: 5px;
   color: black;
-  /* font-weight: bold; */
-  border: none;
-  /* border-radius: 12px; */
-  border: 1px solid black;
-  font-family: 'Lato';
-  font-size: 16px;
-  -webkit-transition-duration: 0.8s; 
-  transition-duration: 0.8s;
-  position: absolute;
-  top: 15px;
-  left: 575px;
+  background: rgb(189, 243, 250);
   font-weight: bold;
-  }
+  border-color: black;
+  font-size: 17px;
+  font-family: 'Overlock';
+  -webkit-transition-duration: 0.4s; 
+  transition-duration: 0.4s;
+  margin: 15px;
+}
   
   .button-markers:focus {
     outline: none;
@@ -32,4 +29,17 @@
     background-color: black; 
     color: white;
     font-weight: bold;
+  }
+
+  .mapita{
+    margin: auto;
+    width: 90%;
+    height: 450px;
+    border-radius: 8px;
+  }
+
+  .titulo{
+    margin: auto;
+    margin-top: 220px;
+    font-size: 25px;
   }
